@@ -1,0 +1,98 @@
+https://code.visualstudio.com/ 
+https://github.com/
+ https://nodejs.org/en/ 
+https://github.com/Aakashdeveloper
+
+Basic JavaScript
+///////////////
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+Third Party Api (Weather Api)
+Redis
+Email With Node(Sendgrid)
+MongoDb Basic
+Api with NodeJS(Rest)
+DashBoard(Crud)
+Oauth(with github)> SSO
+Node-Es6(.babel)
+Login/Logout(JWT)
+OO_NodeJs
+NodeJs with postgres
+----------------------------------------
+GraphQl API
+ChatApp
+---------------
+Testing
+--------------
+Production Pm2
+Nginx
+Docker
+
+
+//Open Source///
+node_modules
+depedency
+package
+
+NPM> Node Package Manager
+
+//////////////////
+Local depedency >  local to folder/app
+Global depedency > local to system
+////////////////
+
+///////////////////
+Local depedency
+ > normal
+ > dev
+///////////////////
+
+
+///////
+Package.json
+////////
+> command to start stop build test
+> depedency management
+> meta data(about)
+
+JSON> JavaScript Object Notation
+[
+    {
+        name:"Ammy"
+        rollno:1
+    },
+    {
+        name:"Jackson"
+        rollno:2,
+        city:"Delhi"
+    }
+]
+
+
+////////////////////////////
+Step to create package.json
+/////////////////////////////
+**NodeJs must be install in your system
+> navigate to folder using cmd where you want to generate
+> npm init
+> Answer all Question
+> type yes
+
+
+
+////////////////////////////
+Step to install localpackage
+/////////////////////////////
+> navigate to folder using cmd where you want to install
+> npm i body-parser/ npm install body-parser
+
+
+//////Dev///////
+> navigate to folder using cmd where you want to install
+> npm i mocha --save-dev
+
+------------15/5/2020---------
+
+
+///Basic Node Package
