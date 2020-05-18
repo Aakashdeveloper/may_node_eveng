@@ -2,6 +2,8 @@ https://code.visualstudio.com/ 
 https://github.com/
  https://nodejs.org/en/ 
 https://github.com/Aakashdeveloper
+https://www.youtube.com/channel/UC26NMdgQBbY6wunk_vZwQZQ/videos?view_as=subscriber
+https://github.com/Aakashdeveloper/may_node_eveng
 
 Basic JavaScript
 ///////////////
@@ -95,4 +97,9 @@ Step to install localpackage
 ------------15/5/2020---------
 
 
-///Basic Node Package
+///Basic Node Package///
+Os
+fs
+http
+
+callback
