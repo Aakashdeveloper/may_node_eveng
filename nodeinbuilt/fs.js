@@ -18,8 +18,13 @@ fs.rename("MyCode.txt","MyText.txt",function(err){
     if(err) throw err;
     console.log("File renamed")
 })
-*/
+
 fs.unlink("MyText.txt",function(err){
     if(err) throw err;
     console.log("File Delete")
+})*/
+
+fs.mkdir('myfolder',function(err){
+    if(err) throw err;
+    console.log("Created")
 })
