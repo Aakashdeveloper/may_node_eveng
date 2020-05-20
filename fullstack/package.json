@@ -1,0 +1,20 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "this is node fullstack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "developerfunnel",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
