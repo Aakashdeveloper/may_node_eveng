@@ -3,8 +3,14 @@ var app = express();
 var port = process.env.PORT || 9000;
 var morgan = require('morgan');
 var chalk = require('chalk');
-var restaurantRouter = require('./src/routes/restaurantRouter')
-var cityRouter = require('./src/routes/cityRouter');
+var menu = [
+	{name:'Home', link:'/'},
+	{name:'Restaurants', link:'/restaurants'},
+	{name:'City', link:'/city'}
+]
+
+var restaurantRouter = require('./src/routes/restaurantRouter')(menu);
+var cityRouter = require('./src/routes/cityRouter')(menu);
 
 //logging
 app.use(morgan('tiny'));
@@ -21,7 +27,7 @@ app.get('/health',function(req,res){
 });
 
 app.get('/',function(req,res){
-    res.render('index')
+    res.render('index',{menu})
 });
 
 app.use('/restaurants',restaurantRouter);

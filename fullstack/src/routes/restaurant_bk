@@ -1,6 +1,11 @@
 var express = require('express');
 var restaurantRouter = express.Router();
 
+var menu = [
+	{name:'Home', link:'/'},
+	{name:'Restaurants', link:'/restaurants'},
+	{name:'City', link:'/city'}
+]
 
 var restaurants = [{
 	"id" : "6360",
@@ -155,24 +160,16 @@ var restaurants = [{
 	"rating_text" : "Good"
 }]
 
-function router(menu){
-	restaurantRouter.route('/')
-		.get(function(req,res){
-			//res.send(restaurants)
-			res.render('restaurant',{title:'Restaurant Page',restaurants:restaurants, menu:menu})
-		});
+restaurantRouter.route('/')
+	.get(function(req,res){
+        //res.send(restaurants)
+        res.render('restaurant',{title:'Restaurant Page',restaurants:restaurants, menu:menu})
+	});
 
 
-	restaurantRouter.route('/details/:id')
-		.get(function(req,res){
-			//var id = req.params.id
-			var {id} = req.params
-			var data = req.query;
-			console.log(data)
-			res.render('resttdetails',{id:id,data:data})
-		});
-	
-	return restaurantRouter
-	
-}
-module.exports = router;
+restaurantRouter.route('/details')
+	.get(function(req,res){
+		res.send("restaurants details")
+    });
+    
+module.exports = restaurantRouter;
