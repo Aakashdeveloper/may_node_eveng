@@ -8,8 +8,8 @@ https://github.com/Aakashdeveloper/may_node_eveng
 Basic JavaScript
 NPM
 Basic NodeJS(in built)(Os,file,http)
-///////////////
 NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+///////////////
 Third Party Api (Weather Api)
 Redis
 Email With Node(Sendgrid)
@@ -180,3 +180,7 @@ linux
 
 Default Port
 (27017)
+
+
+
+lodash
