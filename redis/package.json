@@ -1,0 +1,20 @@
+{
+  "name": "redis-app",
+  "version": "1.0.0",
+  "description": "this is redis app",
+  "main": "index.js",
+  "scripts": {
+    "start":"node app.js",
+    "dev":"nodemon app.js"
+  },
+  "keywords": [
+    "redis"
+  ],
+  "author": "developerfunnel",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "redis": "^3.0.2"
+  }
+}
