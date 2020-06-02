@@ -52,6 +52,24 @@ Create new database
 
 > use nodeevng
 >  db.first.insert({_id:1,name:'john',class:'Ui'})
+
+>CRUD
+
+db.nodeat8.update({_id:"3"}, {
+	$set:{
+		name:"Ammie"
+	}
+})
+
+/////////Delete//////////
+db.nodeat8.remove({_id:"3"})
+
+
+
+
+
+
+
 > db.restaurant.insertMany(
     [{
 	"id" : 6360,
