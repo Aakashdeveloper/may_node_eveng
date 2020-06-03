@@ -12,9 +12,9 @@ NodeJS(full Stack App) (Node-EJS-Mongo-Express)
 Third Party Api (Weather Api)
 Node-Es6(.babel)
 Redis
-///////////////
 Email With Node(Sendgrid)
 MongoDb Basic
+///////////////
 Api with NodeJS(Rest)
 DashBoard(Crud)
 Oauth(with github)> SSO
@@ -209,3 +209,9 @@ git add .
 git commit -m "first commit"
 git remote add origin https://github.com/Aakashdeveloper/narrshit.git
 git push -u origin master
+
+git add .
+git commit -m "first commit"
+git push
+
+git checkout -b home/api
