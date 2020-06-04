@@ -11,30 +11,10 @@ let col_name  = "node@10";
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
-
-//Static File path
-app.use(express.static(__dirname+'/public'))
-//HTML
-app.set('views', './src/views')
-//View Engine
-app.set('view engine', 'ejs');
-
-app.get('/health',(req,res) =>{
-    res.status(200).send('Health OK')
-});
+app.use(bodyParser.json())
 
 app.get('/',(req,res) =>{
-    db.collection(col_name).find({active:true}).toArray((err,result) => {
-        if(err) throw err;
-        res.render('index',{data:result})
-    })
-});
-
-
-app.get('/new',(req,res) =>{
-    var id = Math.floor(Math.random()*1000)
-    res.render('admin',{id:id})
+    res.status(200).send('Health OK')
 });
 
 app.get('/users',(req,res) => {
@@ -62,26 +42,18 @@ app.get('/users',(req,res) => {
 
 app.post('/addUser',(req,res) => {
     console.log(req.body)
-    var data = {
-        _id:parseInt(req.body._id),
-        name: req.body.name,
-        city: req.body.city,
-        phone:parseInt(req.body.phone),
-        active: true
-    }
-    db.collection(col_name).insert(data,(err,result) => {
+    db.collection(col_name).insert(req.body,(err,result) => {
         if(err){
             throw err
         }else{
-           //res.send('Data Added')
-           res.redirect('/')
+            res.send('Data Added')
         }
     })
 });
 
 app.put('/updateUser',(req,res) => {
     db.collection(col_name).update(
-        {_id:parseInt(req.body._id)},
+        {_id:req.body._id},
         {
             $set:{
                 name: req.body.name,
@@ -101,7 +73,7 @@ app.put('/updateUser',(req,res) => {
 
 //delete
 app.delete('/deleteUser',(req,res) => {
-    db.collection(col_name).remove({_id:parseInt(req.body.id)},(err,result)=> {
+    db.collection(col_name).remove({_id:req.body.id},(err,result)=> {
         if(err)
             throw err
         else{
