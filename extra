@@ -215,3 +215,7 @@ git commit -m "first commit"
 git push
 
 git checkout -b home/api
+
+
+/////
+ npm i express cors mongodb mongoose jsonwebtoken body-parser bcryptjs
