@@ -17,8 +17,9 @@ MongoDb Basic
 Api with NodeJS(Rest)
 Oauth(with github)> SSO
 DashBoard(Crud)
-///////////////
 Login/Logout(JWT)
+Production Pm2
+///////////////
 OO_NodeJs
 NodeJs with postgres
 GraphQl API
@@ -26,7 +27,6 @@ ChatApp
 ---------------
 Testing
 --------------
-Production Pm2
 Nginx
 Docker
 
@@ -219,3 +219,10 @@ git checkout -b home/api
 
 /////
  npm i express cors mongodb mongoose jsonwebtoken body-parser bcryptjs
+
+
+ ///Pm2///
+ npm i -g pm2
+ pm2 start startfile
+ pm2 list
+ pm2 stop appname

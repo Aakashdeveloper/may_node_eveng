@@ -25,6 +25,34 @@ router.post('/register',(req,res) => {
     })
 })
 
+//Login User
+router.post('/login',(req,res) => {
+    User.findOne({email:req.body.email},(err,user) =>{
+        if(err) return res.status(500).send('There is a problem in login');
+        if(!user) return res.status(403).send('No User Found register first')
+        else{
+            const passIsValid = bcrypt.compareSync(req.body.password,user.password)
+            if(!passIsValid) return res.status(401).send('Invalid Password')
+            var token = jwt.sign({id:user._id},config.secert,{expiresIn:86400});
+            res.send({auth:true,token:token})
+        }
+    })
+})
+
+
+//Get User info
+router.get('/userInfo',(req,res) => {
+    var token = req.headers['x-access-token']
+    if(!token) res.send({auth:false,token:'No Token Provided'})
+    jwt.verify(token,config.secert,(err,data) => {
+        if(err) return res.status(500).send({auth:false,token:'Invalid Token Provided'});
+        User.findById(data.id,{password:0},(err,user) => {
+            if(err) return res.status(500).send({auth:false,token:'err fetching user'});
+            res.send(user)
+        })
+    })
+})
+
 //List all users
 router.get('/users',(req,res) => {
     User.find({},(err,user) => {
