@@ -19,14 +19,12 @@ Oauth(with github)> SSO
 DashBoard(Crud)
 Login/Logout(JWT)
 Production Pm2
-///////////////
 OO_NodeJs
 NodeJs with postgres
+Testing
+///////////////
 GraphQl API
 ChatApp
----------------
-Testing
---------------
 Nginx
 Docker
 
