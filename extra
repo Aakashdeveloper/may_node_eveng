@@ -22,8 +22,8 @@ Production Pm2
 OO_NodeJs
 NodeJs with postgres
 Testing
-///////////////
 GraphQl API
+///////////////
 ChatApp
 Nginx
 Docker
@@ -224,3 +224,23 @@ git checkout -b home/api
  pm2 start startfile
  pm2 list
  pm2 stop appname
+
+ {
+  product(id:3){
+    name,
+    rating
+  }
+}
+
+json-server
+json-server --watch db.json --port 8900
+
+mutation{
+  addProduct(
+    id:7,
+    name:"DEF",,
+    locality:"Delhi"
+  ){
+    id
+  }
+}
